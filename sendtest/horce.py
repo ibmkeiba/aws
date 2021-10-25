@@ -6,9 +6,9 @@ import mysql.connector
 def horce(race_id):
 # データベース情報を設定
   User = 'root'
-  Password = 'ibmer2021'
-  Host = 'temaa-test-db.cyyyxfovd2dz.ap-northeast-1.rds.amazonaws.com'
-  DataBase = 'mysql'
+  Password = 'xxx'
+  Host = 'xxx'
+  DataBase = 'xxx'
 
 # データベースに接続
   conn = mysql.connector.connect(user=User, password=Password, host=Host, database=DataBase,charset='utf8')
