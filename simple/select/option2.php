@@ -21,25 +21,24 @@
         <table border="1">
 
             <?php $select = 'waku, umaban, bamei, sexage, handicap, jockey, popular, odds, stable, weight, ranking_pre, racetime_pre' ?>
-            <?php $select_ja = array('枠', '馬番', '馬名', '性齢', '斤量', '騎手', '人気', '単勝オッズ', '厩舎', '馬体重', 'AI予想着順', 'AI予想タイム') ?>
+            <?php $select_ja = array('枠', '馬番', '馬名', '性齢', '斤量', '騎手', '人気', '単勝オッズ', '厩舎', '馬体重', '予想着順', '予想タイム') ?>
 
             <?php # 表タイトル <tr> <th></th> </tr> ?>
             <tr>
-                    <?php foreach ($select_ja as $col): ?>
-                    <th><?php echo $col ?></th>
-                    <?php endforeach ?>
+                <?php foreach ($select_ja as $col): ?>
+                <th><?php echo $col ?></th>
+                <?php endforeach ?>
             </tr>
 
             <?php  # 各セル <tr> <td></td> </tr> ?>
             <?php foreach ($pdo -> query("select $select from result WHERE race_id = $race_id") as $row): ?>
             <tr>
-                    <?php foreach ($row as $col): ?>
-                    <td><?php echo $col ?></td>
-                    <?php endforeach ?>
+                <?php foreach ($row as $col): ?>
+                <td><?php echo $col ?></td>
+                <?php endforeach ?>
             </tr>
             <?php endforeach ?>
-            </tr>
-
+        
         </table>
 
         <h1>■ ユーザー入力</h1>
